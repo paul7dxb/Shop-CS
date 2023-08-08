@@ -1,0 +1,15 @@
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\bin\Debug\net7.0\Shop-CS.exe
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\bin\Debug\net7.0\Shop-CS.deps.json
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\bin\Debug\net7.0\Shop-CS.runtimeconfig.json
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\bin\Debug\net7.0\Shop-CS.dll
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\bin\Debug\net7.0\Shop-CS.pdb
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\obj\Debug\net7.0\Shop-CS.csproj.AssemblyReference.cache
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\obj\Debug\net7.0\Shop-CS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\obj\Debug\net7.0\Shop-CS.AssemblyInfoInputs.cache
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\obj\Debug\net7.0\Shop-CS.AssemblyInfo.cs
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\obj\Debug\net7.0\Shop-CS.csproj.CoreCompileInputs.cache
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\obj\Debug\net7.0\Shop-CS.dll
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\obj\Debug\net7.0\refint\Shop-CS.dll
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\obj\Debug\net7.0\Shop-CS.pdb
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\obj\Debug\net7.0\Shop-CS.genruntimeconfig.cache
+C:\Users\Paul\Programming Stuff\Softwire\Training\C#\Shop-CS\obj\Debug\net7.0\ref\Shop-CS.dll
