@@ -5,10 +5,14 @@
     {
         static void Main(string[] args)
         {
-            Console.ResetColor();
+            var morningRolls = new Stock( new Item("Morning Roll", (decimal)0.65),3);
+            var sugaredDonuts = new Stock( new Item("Sugared Donut", (decimal)0.65),3);
+            var sausageRolls = new Stock( new Item("Sausage Roll", (decimal)0.65),3);
+            List<Stock> intialStock = new List<Stock>{morningRolls, sugaredDonuts, sausageRolls, sausageRolls};
+
 
             var paulsShop = new Shop("Paul's Little Bakery");
-            paulsShop.AddInitialStock();
+            paulsShop.AddInitialStock(intialStock);
             paulsShop.CreateTestCustomers();
 
             paulsShop.PrintCustomerNames();
@@ -22,16 +26,20 @@
             // Console.WriteLine(paulsShop.GetCustomerNames());
             paulsShop.Warehouse.PrintAllStock();
 
-            cookieMonster.AddToBasket("Cookies", 3);
+            var cookies = new Item("Cookies", 0.8m);
+
+            cookieMonster.AddToBasket(cookies, 3);
             cookieMonster.ShowBasket();
 
 
-            paulsShop.Warehouse.AddItem(new Item("Cookies", (decimal)1.00), 1);
-            cookieMonster.AddToBasket("Cookies", 3);
+            paulsShop.Warehouse.AddItem(cookies, 1);
+            cookieMonster.AddToBasket(cookies, 3);
             cookieMonster.ShowBasket();
-            paulsShop.Warehouse.AddItem(new Item("Cookies", (decimal)1.00), 2);
-            cookieMonster.AddToBasket("Cookies", 3);
+            paulsShop.Warehouse.AddItem(cookies, 2);
+            cookieMonster.AddToBasket(cookies, 3);
             cookieMonster.ShowBasket();
+            paulsShop.Warehouse.PrintAllStock();
+
 
 
 

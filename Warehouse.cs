@@ -32,9 +32,9 @@ namespace AwesomeShop
 
         }
 
-        public bool StockAvailable(string itemName, int quantity)
+        public bool StockAvailable(Item item, int quantity)
         {
-            var invIndex = Inventory.FindIndex(stock => stock.Item.Name == itemName);
+            var invIndex = Inventory.FindIndex(stock => stock.Item.Name == item.Name);
 
             if (invIndex == -1) return false; //Item not found
             if (Inventory[invIndex].Quantity < quantity) return false; //Not enough stock
@@ -42,9 +42,9 @@ namespace AwesomeShop
             return true;
         }
 
-        public void ReduceStock(string itemName, int quantity)
+        public void ReduceStock(Item item, int quantity)
         {
-            var invIndex = Inventory.FindIndex(stock => stock.Item.Name == itemName);
+            var invIndex = Inventory.FindIndex(stock => stock.Item.Name == item.Name);
             Inventory[invIndex].Quantity -= quantity;
         }
 
@@ -57,6 +57,12 @@ namespace AwesomeShop
             }
             CoolConsole.PrintBoard("Current Stock in Warehouse:", stockString);
 
+        }
+
+        public decimal GetItemPrice(string itemName){
+            var invIndex = Inventory.FindIndex(stock => stock.Item.Name == itemName);
+
+            return Inventory[invIndex].Item.Price;
         }
 
     }

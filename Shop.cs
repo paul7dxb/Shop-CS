@@ -34,11 +34,11 @@ namespace AwesomeShop
         }
 
 
-        public void AddInitialStock()
+        public void AddInitialStock(List<Stock> stocks)
         {
-            Warehouse.AddItem(new Item("Morning Roll", (decimal)0.65), 3);
-            Warehouse.AddItem(new Item("Sugared Donut", (decimal)0.48), 12);
-            Warehouse.AddItem(new Item("Sausage Roll", (decimal)1.35), 2);
+            foreach (Stock stock in stocks){
+                Warehouse.AddItem(stock.Item, stock.Quantity);
+            }
 
         }
 

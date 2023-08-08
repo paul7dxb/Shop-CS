@@ -13,13 +13,13 @@ namespace AwesomeShop
             Basket = new Basket();
         }
 
-        public void AddToBasket(string itemName, int quantity)
+        public void AddToBasket(Item item, int quantity)
         {
-            if (Warehouse.StockAvailable(itemName, quantity))
+            if (Warehouse.StockAvailable(item, quantity))
             {
 
-                Basket.Inventory.Add(new Stock(new Item(itemName, 0.3m), quantity));
-                Warehouse.ReduceStock(itemName, quantity);
+                Basket.Inventory.Add(new Stock(item, quantity));
+                Warehouse.ReduceStock(item, quantity);
             }
             else
             {
