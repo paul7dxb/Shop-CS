@@ -4,12 +4,13 @@ namespace AwesomeShop
     {
 
         public List<Stock> Inventory { get;}
-        public decimal TotalPrice { get; set; }
+        public decimal TotalPrice { get{
+            return Inventory.Sum(x => x.Item.Price * x.Quantity);
+        } }
 
         public Basket()
         {
             Inventory = new List<Stock>();
-            TotalPrice = 0;
         }
         public void ShowBasket(string customer)
         {

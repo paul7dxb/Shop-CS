@@ -4,12 +4,14 @@ namespace AwesomeShop
     {
         public string Name { get; }
         public Warehouse Warehouse { get; }
+        public Accounting Accounting { get; }
         public Basket Basket { get; }
 
-        public Customer(string name, Warehouse warehouse)
+        public Customer(string name, Shop shop)
         {
             Name = name;
-            Warehouse = warehouse;
+            Warehouse = shop.Warehouse;
+            Accounting = shop.Accounting;
             Basket = new Basket();
         }
 
@@ -30,6 +32,10 @@ namespace AwesomeShop
 
         public void ShowBasket(){
             Basket.ShowBasket(Name);
+        }
+
+        public void MakePurchase(){
+            Accounting.MakePurchase(Basket, Name);
         }
 
 

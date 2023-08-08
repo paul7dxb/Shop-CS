@@ -16,29 +16,27 @@
             paulsShop.CreateTestCustomers();
 
             paulsShop.PrintCustomerNames();
-
-            var cookieMonster = new Customer("Cookie Monster", paulsShop.Warehouse);
-            paulsShop.AddCustomer(cookieMonster);
-
             paulsShop.Warehouse.AddItem(new Item("Morning Roll", (decimal)0.65), 3);
             paulsShop.Warehouse.AddItem(new Item("Shortbread", (decimal)1.50), 3);
 
             // Console.WriteLine(paulsShop.GetCustomerNames());
-            paulsShop.Warehouse.PrintAllStock();
-
+            // paulsShop.Warehouse.PrintAllStock();
+            var cookieMonster = new Customer("Cookie Monster", paulsShop);
+            paulsShop.AddCustomer(cookieMonster);
             var cookies = new Item("Cookies", 0.8m);
 
             cookieMonster.AddToBasket(cookies, 3);
             cookieMonster.ShowBasket();
 
 
-            paulsShop.Warehouse.AddItem(cookies, 1);
-            cookieMonster.AddToBasket(cookies, 3);
-            cookieMonster.ShowBasket();
-            paulsShop.Warehouse.AddItem(cookies, 2);
+            paulsShop.Warehouse.AddItem(cookies, 3);
             cookieMonster.AddToBasket(cookies, 3);
             cookieMonster.ShowBasket();
             paulsShop.Warehouse.PrintAllStock();
+
+            cookieMonster.MakePurchase();
+
+            paulsShop.Accounting.PrintTransactions();
 
 
 

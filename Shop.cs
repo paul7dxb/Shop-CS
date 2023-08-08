@@ -3,6 +3,7 @@ namespace AwesomeShop
     class Shop
     {
         public Warehouse Warehouse { get; set; }
+        public Accounting Accounting { get; set; }
         public string Name { get; set; }
         public List<Customer> Customers { get; set; }
 
@@ -10,6 +11,7 @@ namespace AwesomeShop
         {
             Name = name;
             Warehouse = new Warehouse();
+            Accounting = new Accounting();
             Customers = new List<Customer>();
         }
 
@@ -44,10 +46,10 @@ namespace AwesomeShop
 
         public void CreateTestCustomers()
         {
-            AddCustomer(new Customer("Alfred", Warehouse));
-            AddCustomer(new Customer("Batman", Warehouse));
-            AddCustomer(new Customer("Catwoman", Warehouse));
-            AddCustomer(new Customer("Dave", Warehouse));
+            AddCustomer(new Customer("Alfred", this));
+            AddCustomer(new Customer("Batman", this));
+            AddCustomer(new Customer("Catwoman", this));
+            AddCustomer(new Customer("Dave", this));
         }
 
     }
