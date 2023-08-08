@@ -2,14 +2,13 @@ namespace AwesomeShop
 {
     class Stock
     {
-        public int Item { get; }
+        public Item Item { get; }
         public int Quantity{ get; set; }
-        public Stock(int item)
+        public Stock(Item item, int quantity)
         {
-            Item = item;
-            Quantity = 0;
+            Item = new Item(item.Name, item.Price);
+            Quantity = quantity;
         }
-
 
     }
 }
